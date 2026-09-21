@@ -15,8 +15,8 @@ defineExpose({ focus });
 
 <template>
     <div class="relative">
-        <input ref="inputEl" v-model="model" @keydown.enter.prevent="emit('enter')"
-            placeholder="Buscar producto, SKU o escanear código... (F2)"
+        <input ref="inputEl" id="pos-search" name="pos-search" autocomplete="off" v-model="model"
+            @keydown.enter.prevent="emit('enter')" placeholder="Buscar producto, SKU o escanear código... (F2)"
             class="w-full p-4 pl-12 text-lg rounded-xl border-2 border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none bg-white shadow-sm" />
         <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" fill="none" stroke="currentColor"
             viewBox="0 0 24 24">

@@ -51,7 +51,7 @@ const quickAmounts = [5000, 10000, 20000, 50000, 100000];
         </div>
 
         <div v-if="paymentMethod === 'cash'" class="space-y-2">
-            <input :value="amountReceived"
+            <input id="pos-amount-received" name="amount-received" autocomplete="off" :value="amountReceived"
                 @input="emit('update:amountReceived', Number(($event.target as HTMLInputElement).value))" type="number"
                 step="1000" min="0" placeholder="Monto recibido"
                 class="w-full p-3 border-2 border-slate-300 rounded-lg text-lg font-medium focus:border-blue-500 outline-none" />

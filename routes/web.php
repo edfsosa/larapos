@@ -7,7 +7,9 @@ use App\Http\Controllers\SaleController;
 Route::inertia('/', 'Welcome')->name('home');
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::inertia('dashboard', 'Dashboard')->name('dashboard');
+    Route::get('dashboard', function () {
+        return redirect(auth()->user()->homeRoute());
+    })->name('dashboard');
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {
